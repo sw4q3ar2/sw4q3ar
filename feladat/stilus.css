@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+    font-family: 'Lato' sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.letoltes-tag{
+    color: black;
+    background-color: wheat;
+    border: 3px ridge white;
+    width: 100px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.letoltes-tag:hover{
+    color: crimson;
+    background-color: white;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-title{
+    font-size: 4rem;
+    font-weight: 300px;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.works-title span{
+    color: crimson;
+}
+
+/* Kezdo Hero Section */
+#hero{
+    background-image:url("kepek/kep2.jpeg");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;          /* atmenet */
+}
+
+button{
+    width: 90px;
+    height: 30px;
+}
+
+#hero::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#hero h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.5s;
+}
+
+#hero .hero{
+    
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/* Befejezo Hero Section */
+
+
+/* Kezdo Works Section */
+
+.works{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.works-container2{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.works-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+}
+
+.works .works-top p{
+    font-size: 1.4rem;
+    margin-top: 0px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    font-weight: .05rem;
+}
+
+.works .works-top{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.works .works-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.works .works-item{
+    flex-basis: 80%;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #485563;
+    background-size: cover;
+    margin: 10px 5%;
+    color: white;
+}
+
+.works .works-item p{
+    padding-bottom: 30px;
+}
+ 
+.works .works-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .9;
+    z-index: -1;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* Befejezo Works Section */
+
+
+/* Kezdo Contact Section */
+.gridtarolo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.gridtarolok{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-areas: 1fr 1fr;
+    justify-content: center;
+}
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items{
+    width: 400px;
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 20%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/* Befejezo Contact Section */
+
+/* Kezdo About Section */
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+#about .col-left{  /* Az egesz meretezese */
+    width: 400px;
+}
+
+#about .col-right{
+    width: 100%;
+}
+
+#about .col-right h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    margin-bottom: 10px;
+}
+
+#about .col-right p{
+    margin-bottom: 20px;
+}
+
+#about .col-right .cta{ /* oneletrajz letoltes */
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+.about-img{
+    height: 100%;
+    width: 100%;
+    border-style: inset;
+    border-color: crimson;
+}
+/* Befejezo About Section */
+
+
+/* Keyframes*/
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;  /* Animacio Kezdete */
+        left: 0;
+    }
+    100%{
+        width: 0;     /* Animacio Vege */
+        left: 100%;
+    }
+}
+/* Masodik animation */
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_reveal_name{
+    100%{
+        color: crimson;
+        font-weight: 500px;
+    }
+}
+/* Befejezes Keyframes*/
+
+/* Kezdo Media Telo */
+@media screen and (max-width:600px) {
+    .gridtarolok{
+        grid-template-columns: 500px;
+        justify-content: center;
+    }
+    .gridtarolo{
+        grid-template-columns: 1fr;
+    }
+    #hero{
+        background-image:url("kepek/kep2.jpeg");
+        width: 100%;
+    }
+    .works-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 0px;
+        row-gap: 5px;
+    }
+}
+/* Befejezo  Media Telo */
+
+
